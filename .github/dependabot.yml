@@ -5,3 +5,13 @@ updates:
     schedule:
       interval: "weekly"
     insecure-external-code-execution: allow
+    registries:
+      - my-jfrog-artifactory-feed
+
+registries:
+  my-jfrog-artifactory-feed:
+    type: python-index
+    url: https://jfrogghdemo.jfrog.io/artifactory/api/pypi/db-dependbot-python/simple
+    jfrog-oidc-provider-name: dsptesting-provider-name
+    audience: dsp-testing
+    identity-mapping-name: python-test
